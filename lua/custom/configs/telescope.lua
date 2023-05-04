@@ -15,12 +15,5 @@ require("telescope").setup {
       }
     }
   },
-}
-    mappings = {
-      i = {
-        -- press ; to close popup
-        [";"] = actions.close,
-      },
-    },
-  },
+
 }

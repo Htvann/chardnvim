@@ -262,6 +262,7 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
+  { "catppuccin/nvim", as = "catppuccin" },
 }
 
 local config = require("core.utils").load_config()
