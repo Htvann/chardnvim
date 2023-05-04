@@ -190,9 +190,9 @@ local default_plugins = {
         "hrsh7th/cmp-path",
       },
     },
-    -- opts = function()
-    --   return require "plugins.configs.cmp"
-    -- end,
+    opts = function()
+      return require "plugins.configs.cmp"
+    end,
     config = function(_, opts)
       require("cmp").setup(opts)
     end,
@@ -262,7 +262,17 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
-  { "catppuccin/nvim", as = "catppuccin" },
+  { "catppuccin/nvim" },
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-treesitter.configs").setup {
+        autotag = {
+          enable = true,
+        },
+      }
+    end,
+  },
 }
 
 local config = require("core.utils").load_config()
