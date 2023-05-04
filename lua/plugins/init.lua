@@ -190,9 +190,9 @@ local default_plugins = {
         "hrsh7th/cmp-path",
       },
     },
-    opts = function()
-      return require "plugins.configs.cmp"
-    end,
+    -- opts = function()
+    --   return require "plugins.configs.cmp"
+    -- end,
     config = function(_, opts)
       require("cmp").setup(opts)
     end,
@@ -235,16 +235,19 @@ local default_plugins = {
     opts = function()
       return require "plugins.configs.telescope"
     end,
-    config = function(_, opts)
-      dofile(vim.g.base46_cache .. "telescope")
-      local telescope = require "telescope"
-      telescope.setup(opts)
-
-      -- load extensions
-      for _, ext in ipairs(opts.extensions_list) do
-        telescope.load_extension(ext)
-      end
+    config = function()
+      require "plugins.configs.telescope"
     end,
+    -- config = function(_, opts)
+    -- dofile(vim.g.base46_cache .. "telescope")
+    -- local telescope = require "telescope"
+    -- telescope.setup(opts)
+
+    -- load extensions
+    -- for _, ext in ipairs(opts.extensions_list) do
+    -- telescope.load_extension(ext)
+    -- end
+    -- end,
   },
 
   -- Only load whichkey after all the gui
