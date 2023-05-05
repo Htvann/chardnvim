@@ -263,6 +263,7 @@ local default_plugins = {
     end,
   },
   { "catppuccin/nvim" },
+  { "folke/tokyonight.nvim" },
   {
     "windwp/nvim-ts-autotag",
     config = function()

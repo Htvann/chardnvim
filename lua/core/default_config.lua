@@ -11,7 +11,7 @@ M.ui = {
   hl_override = {},
   changed_themes = {},
   theme_toggle = { "catppuccin", "catppuccin" },
-  theme = "catppuccin",        -- default theme
+  theme = "tokyonight",        -- default theme
   transparency = false,
   lsp_semantic_tokens = false, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
 
